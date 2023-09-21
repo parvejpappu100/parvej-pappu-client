@@ -1,14 +1,23 @@
-import React from 'react';
-import { Link } from 'react-scroll';
+import React, { useState } from 'react';
+import { Element, Link } from 'react-scroll';
 import { BiLogoUpwork } from "react-icons/bi";
 import { TbBrandFiverr, TbBrandLinkedin } from "react-icons/tb";
+import Banner from '../Banner/Banner';
 
 
 
 const Navbar = () => {
 
+    const [activeLink, setActiveLink] = useState('home');
+
     const navOption = <>
-        <li><Link>ome</Link></li>
+        <li><Link style={activeLink === 'home' ? { color: '#F59E0B', backgroundColor: 'white' } : {}}
+            className='hover:text-[#F59E0B] hover:bg-white'
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onSetActive={() => setActiveLink('home')} >Home</Link></li>
         <li><Link>About</Link></li>
         <li><Link>Services</Link></li>
         <li><Link>Skill</Link></li>
@@ -20,7 +29,7 @@ const Navbar = () => {
     return (
         <div>
             <div className='sticky top-0 z-50 bg-white'>
-                <div className="navbar bg-base-100 max-w-6xl mx-auto lg:my-8 ">
+                <div className="navbar max-w-[1120px] mx-auto lg:my-8 ">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -30,8 +39,8 @@ const Navbar = () => {
                                 {navOption}
                             </ul>
                         </div>
-                        <a className="cursor-pointer uppercase text-2xl font-semibold">
-                            PAPPU.
+                        <a className="cursor-pointer uppercase text-2xl font-bold">
+                            PA<span className='text-[#F59E0B]'>PP</span>U.
                         </a>
                     </div>
                     <div className="navbar-center hidden lg:flex">
@@ -49,7 +58,9 @@ const Navbar = () => {
                 </div>
             </div>
             <div>
-
+                <Element name="home" className="section">
+                    <Banner></Banner>
+                </Element>
             </div>
         </div>
     );
