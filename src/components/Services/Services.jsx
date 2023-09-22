@@ -4,10 +4,11 @@ import { FaCloudUploadAlt, FaCode, FaCodeBranch, FaServer } from "react-icons/fa
 import { MdBuild, MdWeb } from 'react-icons/md';
 import { AiOutlineMobile } from 'react-icons/ai';
 import { GiDatabase } from 'react-icons/gi';
+import SubBanner from '../SubBanner/SubBanner';
 
 const Services = () => {
     return (
-        <div className='bg-[#F9FAFB] my-32 '>
+        <div className='bg-[#F9FAFB] my-32'>
             <div className='max-w-[1120px] mx-auto py-24 px-4'>
                 <SectionTitle title={"My Services"} subTitle={"What I Do?"}></SectionTitle>
                 <div className='mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
@@ -52,6 +53,9 @@ const Services = () => {
                         <p>Provide ongoing maintenance, updates, and support for your MERN stack applications, ensuring their smooth operation and addressing any issues that may arise.</p>
                     </div>
                 </div>
+            </div>
+            <div>
+                <SubBanner></SubBanner>
             </div>
         </div>
     );
