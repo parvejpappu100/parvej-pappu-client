@@ -3,6 +3,7 @@ import { Element, Link } from 'react-scroll';
 import { BiLogoUpwork } from "react-icons/bi";
 import { TbBrandFiverr, TbBrandLinkedin } from "react-icons/tb";
 import Banner from '../Banner/Banner';
+import About from '../About/About';
 
 
 
@@ -18,7 +19,13 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             onSetActive={() => setActiveLink('home')} >Home</Link></li>
-        <li><Link>About</Link></li>
+        <li><Link style={activeLink === 'about' ? { color: '#F59E0B', backgroundColor: 'white' } : {}}
+            className='hover:text-[#F59E0B] hover:bg-white'
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onSetActive={() => setActiveLink('about')}>About</Link></li>
         <li><Link>Services</Link></li>
         <li><Link>Skill</Link></li>
         <li><Link>Portfolio</Link></li>
@@ -60,6 +67,9 @@ const Navbar = () => {
             <div>
                 <Element name="home" className="section">
                     <Banner></Banner>
+                </Element>
+                <Element name="about" className="section">
+                    <About></About>
                 </Element>
             </div>
         </div>
