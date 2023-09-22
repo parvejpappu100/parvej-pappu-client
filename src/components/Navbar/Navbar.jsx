@@ -4,6 +4,7 @@ import { BiLogoUpwork } from "react-icons/bi";
 import { TbBrandFiverr, TbBrandLinkedin } from "react-icons/tb";
 import Banner from '../Banner/Banner';
 import About from '../About/About';
+import Services from '../Services/Services';
 
 
 
@@ -26,7 +27,13 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             onSetActive={() => setActiveLink('about')}>About</Link></li>
-        <li><Link>Services</Link></li>
+        <li><Link style={activeLink === 'services' ? { color: '#F59E0B', backgroundColor: 'white' } : {}}
+            className='hover:text-[#F59E0B] hover:bg-white'
+            to="services"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onSetActive={() => setActiveLink('services')}>Services</Link></li>
         <li><Link>Skill</Link></li>
         <li><Link>Portfolio</Link></li>
         <li><Link>Testimonial</Link></li>
@@ -70,6 +77,9 @@ const Navbar = () => {
                 </Element>
                 <Element name="about" className="section">
                     <About></About>
+                </Element>
+                <Element name="services" className="section">
+                    <Services></Services>
                 </Element>
             </div>
         </div>
