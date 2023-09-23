@@ -1,0 +1,13 @@
+.tab-list {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .tab {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }

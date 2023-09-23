@@ -5,7 +5,7 @@ import ResumePDF from "../../assets/resume/Resume of Parvej Hasan.pdf"
 
 const Skills = () => {
     return (
-        <div className='bg-[#F9FAFB]'>
+        <div className='bg-[#F9FAFB] mb-32'>
             <div className='max-w-[1120px] mx-auto py-32 px-4'>
                 <SectionTitle title={"Skills"} subTitle={"My Skill"}></SectionTitle>
                 <div className='mt-24'>
