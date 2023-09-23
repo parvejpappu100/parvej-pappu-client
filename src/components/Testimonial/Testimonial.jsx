@@ -53,8 +53,8 @@ const Testimonial = () => {
                         className="mySwiper"
                     >
 
-                        {testimonials.map(testimonial => <SwiperSlide key={testimonial._id}>
-                            <div className='p-6 bg-white h-[300px] shadow'>
+                        {testimonials.map(testimonial => <SwiperSlide className='pb-8 cursor-ew-resize' key={testimonial._id}>
+                            <div className='p-6 bg-white h-[250px] shadow'>
 
                                 <div className=''>
                                     <Rating

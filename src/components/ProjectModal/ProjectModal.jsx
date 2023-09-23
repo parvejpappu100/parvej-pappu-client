@@ -35,7 +35,7 @@ const ProjectModal = ({ project, showModal, setShowModal }) => {
                                             <p><strong>Technology :</strong> {technology}</p>
                                             <p><strong>Client Link :</strong> <a className='underline' href={client_link}>{client_link}</a></p>
                                             <p><strong>Server Link :</strong> <a className='underline' href={server_link ? server_link : "#"}>{server_link ? server_link : "No Server"}</a></p>
-                                            <p><strong>Live Link :</strong> <a className='text-green-600 font-semibold' href={live_link}>{live_link}</a></p>
+                                            <p><strong>Live Link :</strong> <a className='text-[#F6AA2A] font-semibold' href={live_link}>{live_link}</a></p>
                                         </div>
                                     </div>
                                 </div>
