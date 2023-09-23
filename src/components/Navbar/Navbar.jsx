@@ -5,6 +5,7 @@ import { TbBrandFiverr, TbBrandLinkedin } from "react-icons/tb";
 import Banner from '../Banner/Banner';
 import About from '../About/About';
 import Services from '../Services/Services';
+import Skills from '../Skills/Skills';
 
 
 
@@ -34,7 +35,13 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             onSetActive={() => setActiveLink('services')}>Services</Link></li>
-        <li><Link>Skill</Link></li>
+        <li><Link style={activeLink === 'skills' ? { color: '#F59E0B', backgroundColor: 'white' } : {}}
+            className='hover:text-[#F59E0B] hover:bg-white'
+            to="skills"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onSetActive={() => setActiveLink('skills')}>Skill</Link></li>
         <li><Link>Portfolio</Link></li>
         <li><Link>Testimonial</Link></li>
         <li><Link>Contact</Link></li>
@@ -80,6 +87,9 @@ const Navbar = () => {
                 </Element>
                 <Element name="services" className="section">
                     <Services></Services>
+                </Element>
+                <Element name="skills" className="section">
+                    <Skills></Skills>
                 </Element>
             </div>
         </div>

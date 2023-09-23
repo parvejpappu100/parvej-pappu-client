@@ -5,7 +5,7 @@ import "./SubBanner.css"
 const SubBanner = () => {
     return (
         <div className='bg-img' >
-            <div className='bg-black bg-opacity-50 py-24 '>
+            <div className='bg-black bg-opacity-80 py-24 '>
                 <div className='max-w-[600px]  mx-auto text-center px-4'>
                     <h3 className='text-2xl font-semibold text-white'>I Am Available For Freelancer Projects.</h3>
                     <p className='text-gray-300 my-5'>Let's collaborate and transform your ideas into remarkable web experiences that leave a lasting impression.</p>

@@ -8,7 +8,7 @@ import SubBanner from '../SubBanner/SubBanner';
 
 const Services = () => {
     return (
-        <div className='bg-[#F9FAFB] my-32'>
+        <div className='bg-[#F9FAFB] mt-32'>
             <div className='max-w-[1120px] mx-auto py-24 px-4'>
                 <SectionTitle title={"My Services"} subTitle={"What I Do?"}></SectionTitle>
                 <div className='mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
