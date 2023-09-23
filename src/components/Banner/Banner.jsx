@@ -3,6 +3,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { FaDownload } from "react-icons/fa";
 import myPhoto from "../../assets/images/myPhoto.png";
 import ResumePDF from "../../assets/resume/Resume of Parvej Hasan.pdf";
+import { Link } from 'react-scroll';
 
 
 const Banner = () => {
@@ -39,9 +40,11 @@ const Banner = () => {
 
                     <p className='my-8 '>I'm a passionate MERN (MongoDB, Express.js, React.js, Node.js) stack developer, dedicated to crafting innovative web applications. With expertise in both front-end and back-end technologies, I specialize in creating responsive, high-performance websites. Let's collaborate and turn your ideas into reality!</p>
                     <div className='flex items-center gap-2 md:gap-4'>
-                        <button className="btn bg-[#F59E0B] text-white normal-case text-base px-6 rounded-md hover:bg-[#D97706]  duration-1000 border-none font-bold">
-                            Hire Me
-                        </button>
+                        <Link to='contact' smooth={true} duration={1000}>
+                            <button className="btn bg-[#F59E0B] text-white normal-case text-base px-6 rounded-md hover:bg-[#D97706]  duration-1000 border-none font-bold">
+                                Hire Me
+                            </button>
+                        </Link>
                         <a href={ResumePDF}
                             download="Resume of Parvej Hasan Pappu"
                             target="_blank"
