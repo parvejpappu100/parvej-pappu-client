@@ -8,14 +8,14 @@ const Footer = () => {
         <div className='bg-black mt-24'>
             <footer className=" lg:container mx-auto footer py-24 px-4  text-neutral-content">
                 <aside>
-                    <h3 className='uppercase text-2xl font-bold'>PA<span className='text-[#F59E0B]'>PP</span>U.</h3>
+                    <h3 className='uppercase text-2xl font-bold text-white'>PA<span className='text-[#F59E0B]'>PP</span>U.</h3>
                     <p className='text-white font-medium'>Parvej Hasan Pappu<br />MERN Stack Developer | Building Next-Level Web Solutions</p>
                 </aside>
                 <nav>
                     <header className="footer-title">Social</header>
                     <div className='flex gap-4 text-xl'>
                         <div className=' bg-[#192132] text-white p-1 rounded-md  hover:bg-[#F59E0B] shadow-md duration-1000'>
-                            <a href="https://www.facebook.com/pappu.parvejhasan/" target='_blank'><BiLogoUpwork></BiLogoUpwork></a>
+                            <a href="https://www.upwork.com/freelancers/~0138d7aea07a92ac8a" target='_blank'><BiLogoUpwork></BiLogoUpwork></a>
                         </div>
                         <div className=' bg-[#192132] text-white p-1 rounded-md  hover:bg-[#F59E0B] shadow-md duration-1000'>
                             <a href="https://www.facebook.com/pappu.parvejhasan/" target='_blank'><TbBrandFiverr></TbBrandFiverr></a>

@@ -16,12 +16,12 @@ const Contact = () => {
                         <p className='my-4'>Dhaka , Bangladesh</p>
                         <div className='flex items-center gap-4 my-4'>
                             <div>
-                                <FaEnvelope className=''></FaEnvelope>
+                                <FaEnvelope></FaEnvelope>
                             </div>
                             <p>parvejhasanpappu100@gmail.com</p>
                         </div>
                         <div className='flex items-center gap-4 '>
-                            <div className=''>
+                            <div>
                                 <FaPhoneAlt></FaPhoneAlt>
                             </div>
                             <p>01974190770 (What's Up , Telegram) <br /> 01608190770</p>
