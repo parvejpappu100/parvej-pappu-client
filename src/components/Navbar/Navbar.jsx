@@ -7,6 +7,7 @@ import About from '../About/About';
 import Services from '../Services/Services';
 import Skills from '../Skills/Skills';
 import Projects from '../Projects/Projects';
+import Testimonial from '../Testimonial/Testimonial';
 
 
 
@@ -50,7 +51,13 @@ const Navbar = () => {
             smooth={true}
             duration={500}
             onSetActive={() => setActiveLink('portfolio')}>Portfolio</Link></li>
-        <li><Link>Testimonial</Link></li>
+        <li><Link style={activeLink === 'testimonial' ? { color: '#F59E0B', backgroundColor: 'white' } : {}}
+            className='hover:text-[#F59E0B] hover:bg-white'
+            to="testimonial"
+            spy={true}
+            smooth={true}
+            duration={500}
+            onSetActive={() => setActiveLink('testimonial')}>Testimonial</Link></li>
         <li><Link>Contact</Link></li>
     </>
 
@@ -100,6 +107,9 @@ const Navbar = () => {
                 </Element>
                 <Element name="portfolio" className="section">
                     <Projects></Projects>
+                </Element>
+                <Element name="testimonial" className="section">
+                    <Testimonial></Testimonial>
                 </Element>
             </div>
         </div>

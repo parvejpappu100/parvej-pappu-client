@@ -63,7 +63,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className='mt-12'>
-                        <Link to='' smooth={true} duration={1000}>
+                        <Link to='portfolio' smooth={true} duration={1000}>
                             <button className="btn bg-[#FDF0DB] text-[#F59E0B] normal-case text-base px-6 rounded-md hover:bg-[#F59E0B] hover:text-white  duration-1000 border border-[#e2ceac] font-bold ">
                                 See Work
                             </button>
