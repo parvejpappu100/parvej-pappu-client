@@ -9,58 +9,61 @@ import Skills from '../Skills/Skills';
 import Projects from '../Projects/Projects';
 import Testimonial from '../Testimonial/Testimonial';
 import Contact from '../Contact/Contact';
+import useAuth from '../hooks/useAuth';
 
 
 
 const Navbar = () => {
 
+    const { themeBlack } = useAuth();
+
     const [activeLink, setActiveLink] = useState('home');
 
     const navOption = <>
-        <li><Link style={activeLink === 'home' ? { color: '#F59E0B', backgroundColor: 'white' } : {}}
-            className='hover:text-[#F59E0B] hover:bg-white'
+        <li><Link style={activeLink === 'home' ? { color: '#F59E0B', backgroundColor: themeBlack == true ? "#1A1E29" : "white" } : {}}
+            className={themeBlack == true ? "hover:text-white bg-[#1A1E29]" : "hover:text-[#F59E0B] hover:bg-white"}
             to="home"
             spy={true}
             smooth={true}
             duration={500}
             onSetActive={() => setActiveLink('home')} >Home</Link></li>
-        <li><Link style={activeLink === 'about' ? { color: '#F59E0B', backgroundColor: 'white' } : {}}
-            className='hover:text-[#F59E0B] hover:bg-white'
+        <li><Link style={activeLink === 'about' ? { color: '#F59E0B', backgroundColor: themeBlack == true ? "#1A1E29" : "white" } : {}}
+            className={themeBlack == true ? "hover:text-white bg-[#1A1E29]" : "hover:text-[#F59E0B] hover:bg-white"}
             to="about"
             spy={true}
             smooth={true}
             duration={500}
             onSetActive={() => setActiveLink('about')}>About</Link></li>
-        <li><Link style={activeLink === 'services' ? { color: '#F59E0B', backgroundColor: 'white' } : {}}
-            className='hover:text-[#F59E0B] hover:bg-white'
+        <li><Link style={activeLink === 'services' ? { color: '#F59E0B', backgroundColor: themeBlack == true ? "#1A1E29" : "white" } : {}}
+            className={themeBlack == true ? "hover:text-white bg-[#1A1E29]" : "hover:text-[#F59E0B] hover:bg-white"}
             to="services"
             spy={true}
             smooth={true}
             duration={500}
             onSetActive={() => setActiveLink('services')}>Services</Link></li>
-        <li><Link style={activeLink === 'skills' ? { color: '#F59E0B', backgroundColor: 'white' } : {}}
-            className='hover:text-[#F59E0B] hover:bg-white'
+        <li><Link style={activeLink === 'skills' ? { color: '#F59E0B', backgroundColor: themeBlack == true ? "#1A1E29" : "white" } : {}}
+            className={themeBlack == true ? "hover:text-white bg-[#1A1E29]" : "hover:text-[#F59E0B] hover:bg-white"}
             to="skills"
             spy={true}
             smooth={true}
             duration={500}
             onSetActive={() => setActiveLink('skills')}>Skill</Link></li>
-        <li><Link style={activeLink === 'portfolio' ? { color: '#F59E0B', backgroundColor: 'white' } : {}}
-            className='hover:text-[#F59E0B] hover:bg-white'
+        <li><Link style={activeLink === 'portfolio' ? { color: '#F59E0B', backgroundColor: themeBlack == true ? "#1A1E29" : "white" } : {}}
+            className={themeBlack == true ? "hover:text-white bg-[#1A1E29]" : "hover:text-[#F59E0B] hover:bg-white"}
             to="portfolio"
             spy={true}
             smooth={true}
             duration={500}
             onSetActive={() => setActiveLink('portfolio')}>Portfolio</Link></li>
-        <li><Link style={activeLink === 'testimonial' ? { color: '#F59E0B', backgroundColor: 'white' } : {}}
-            className='hover:text-[#F59E0B] hover:bg-white'
+        <li><Link style={activeLink === 'testimonial' ? { color: '#F59E0B', backgroundColor: themeBlack == true ? "#1A1E29" : "white" } : {}}
+            className={themeBlack == true ? "hover:text-white bg-[#1A1E29]" : "hover:text-[#F59E0B] hover:bg-white"}
             to="testimonial"
             spy={true}
             smooth={true}
             duration={500}
             onSetActive={() => setActiveLink('testimonial')}>Testimonial</Link></li>
-        <li><Link style={activeLink === 'contact' ? { color: '#F59E0B', backgroundColor: 'white' } : {}}
-            className='hover:text-[#F59E0B] hover:bg-white'
+        <li><Link style={activeLink === 'contact' ? { color: '#F59E0B', backgroundColor: themeBlack == true ? "#1A1E29" : "white" } : {}}
+            className={themeBlack == true ? "hover:text-white bg-[#1A1E29]" : "hover:text-[#F59E0B] hover:bg-white"}
             to="contact"
             spy={true}
             smooth={true}
@@ -69,9 +72,9 @@ const Navbar = () => {
     </>
 
     return (
-        <div className='lg:mt-8'>
-            <div className='sticky top-0 z-50 bg-white '>
-                <div className="navbar max-w-[1120px] mx-auto lg:mb-8 ">
+        <div>
+            <div className={ themeBlack == true ? "sticky top-0 z-50 lg:py-8 bg-[#1A1E29] text-[#94A3B8]" : "sticky top-0 z-50 lg:py-8  bg-white"}>
+                <div className="navbar max-w-[1120px] mx-auto ">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -81,7 +84,7 @@ const Navbar = () => {
                                 {navOption}
                             </ul>
                         </div>
-                        <a className="cursor-pointer uppercase text-2xl font-bold">
+                        <a className={themeBlack == true ? "cursor-pointer uppercase text-2xl font-bold text-white" : "cursor-pointer uppercase text-2xl font-bold"}>
                             PA<span className='text-[#F59E0B]'>PP</span>U.
                         </a>
                     </div>
