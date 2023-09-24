@@ -59,7 +59,7 @@ const Banner = () => {
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <button className="btn bg-[#FDF0DB] text-[#F59E0B] normal-case text-base px-6 rounded-md hover:bg-[#F59E0B] hover:text-white  duration-1000 border border-[#e2ceac]  font-bold ">
+                                <button className={themeBlack == true ? "btn bg-[#302B26] text-[#F59E0B] normal-case text-base px-6 rounded-md hover:bg-[#F59E0B] hover:text-white  duration-1000 border border-[#7a7060] hover:border-[#F59E0B]  font-bold" : "btn bg-[#FDF0DB] text-[#F59E0B] normal-case text-base px-6 rounded-md hover:bg-[#F59E0B] hover:text-white  duration-1000 border border-[#e2ceac]  font-bold"}>
                                     Download Resume
                                     <FaDownload></FaDownload>
                                 </button>
