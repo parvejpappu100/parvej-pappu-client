@@ -5,7 +5,7 @@ import { TbBrandFiverr } from "react-icons/tb";
 
 const Footer = () => {
     return (
-        <div className='bg-black mt-24'>
+        <div className='bg-black'>
             <footer className=" lg:container mx-auto footer py-24 px-4  text-neutral-content">
                 <aside>
                     <h3 className='uppercase text-2xl font-bold text-white'>PA<span className='text-[#F59E0B]'>PP</span>U.</h3>

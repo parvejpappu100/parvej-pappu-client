@@ -26,7 +26,7 @@ const Testimonial = () => {
 
     return (
         <div className={themeBlack == true ? "bg-[#0F172A] text-[#94A3B8] duration-700" : "bg-[#F9FAFB] duration-700"}>
-            <div className='px-4 max-w-[1120px] mx-auto py-32'>
+            <div className='px-4 max-w-[1120px] mx-auto py-32 '>
                 <SectionTitle title={"Testimonial"} subTitle={"Client's Review"}></SectionTitle>
                 <div className='mt-32'>
                     <Swiper
