@@ -10,7 +10,7 @@ const About = () => {
     const {themeBlack} = useAuth();
 
     return (
-        <div className={themeBlack == true ? "bg-[#0F172A] text-[#94A3B8]" : "bg-white"}>
+        <div className={themeBlack == true ? "bg-[#0F172A] text-[#94A3B8] duration-700" : "bg-white duration-700"}>
             <div className='max-w-[1120px] mx-auto py-32 px-4 '>
                 <SectionTitle title={"About Me"} subTitle={"Know me more"}></SectionTitle>
                 <div className='flex flex-col lg:flex-row gap-12 items-center mt-32'>
@@ -22,7 +22,7 @@ const About = () => {
                             <div className='bg-[#F59E0B] p-2 w-2 h-2 rounded-full'></div>
                             <h5 className='text-xl  '>About Me</h5>
                         </div>
-                        <h4 className={themeBlack == true ? "text-2xl text-white md:text-3xl lg:text-4xl font-bold my-5" : "text-2xl md:text-3xl lg:text-4xl font-bold my-5"}>Turning Ideas into Digital Realities: Your Web Development Partner</h4>
+                        <h4 className={themeBlack == true ? "text-2xl text-white md:text-3xl duration-700 lg:text-4xl font-bold my-5" : "text-2xl md:text-3xl lg:text-4xl font-bold my-5 duration-700"}>Turning Ideas into Digital Realities: Your Web Development Partner</h4>
                         <p className='my-8'>Hello, I'm a versatile MERN stack developer with a passion for crafting extraordinary web experiences. I excel in frontend and backend development, creating captivating user interfaces and robust server-side functionality. With expertise in HTML, CSS, and JavaScript, I build visually stunning and responsive websites. Let's collaborate to bring your vision to life and make an impact in the digital realm</p>
                         <p>Let's collaborate and transform your ideas into remarkable web experiences that leave a lasting impression.</p>
                         <div className='my-8 flex flex-col md:flex-row gap-5 md:gap-24'>
