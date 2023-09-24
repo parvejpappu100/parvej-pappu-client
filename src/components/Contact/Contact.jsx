@@ -14,7 +14,7 @@ const Contact = () => {
     const onSubmit = async (data) => {
         setSending(true);
         try {
-            await fetch('http://localhost:5000/send-email', {
+            await fetch('https://parvej-hasan-server.vercel.app/send-email', {
                 method: 'POST',
                 headers: {
                     "content-type": "application/json"
