@@ -73,7 +73,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className={ themeBlack == true ? "sticky top-0 z-50 lg:py-8 bg-[#1A1E29] text-[#94A3B8]" : "sticky top-0 z-50 lg:py-8  bg-white"}>
+            <div className={ themeBlack == true ? "sticky top-0 z-50  bg-[#1A1E29] duration-700 text-[#94A3B8]" : "sticky top-0 z-50  bg-white duration-700"}>
                 <div className="navbar max-w-[1120px] mx-auto ">
                     <div className="navbar-start">
                         <div className="dropdown">
@@ -84,7 +84,7 @@ const Navbar = () => {
                                 {navOption}
                             </ul>
                         </div>
-                        <a className={themeBlack == true ? "cursor-pointer uppercase text-2xl font-bold text-white" : "cursor-pointer uppercase text-2xl font-bold"}>
+                        <a className={themeBlack == true ? "cursor-pointer uppercase text-2xl font-bold text-white duration-700" : "cursor-pointer uppercase text-2xl font-bold"}>
                             PA<span className='text-[#F59E0B]'>PP</span>U.
                         </a>
                     </div>

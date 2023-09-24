@@ -16,7 +16,7 @@ const Banner = () => {
     };
 
     return (
-        <div className='bg-[#FEFAF3] '>
+        <div className={themeBlack == true ? "bg-[#1A1E29] text-white duration-700" : "bg-[#FEFAF3] duration-700"}>
             <div className=''>
                 <div className='flex flex-col-reverse lg:flex-row  items-center max-w-6xl mx-auto lg:pt-32 px-4 pb-8 lg:pb-0 w-full'>
                     <div className=''>
@@ -47,7 +47,7 @@ const Banner = () => {
 
                         </h2>
 
-                        <p className='my-8 '>I'm a passionate MERN (MongoDB, Express.js, React.js, Node.js) stack developer, dedicated to crafting innovative web applications. With expertise in both front-end and back-end technologies, I specialize in creating responsive, high-performance websites. Let's collaborate and turn your ideas into reality!</p>
+                        <p className={themeBlack == true ? "text-[#94A3B8] my-8" : "my-8"}>I'm a passionate MERN (MongoDB, Express.js, React.js, Node.js) stack developer, dedicated to crafting innovative web applications. With expertise in both front-end and back-end technologies, I specialize in creating responsive, high-performance websites. Let's collaborate and turn your ideas into reality!</p>
                         <div className='flex items-center gap-2 md:gap-4'>
                             <Link to='contact' smooth={true} duration={1000}>
                                 <button className="btn bg-[#F59E0B] text-white normal-case text-base px-6 rounded-md hover:bg-[#D97706]  duration-1000 border-none font-bold">
