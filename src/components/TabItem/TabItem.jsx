@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import ProjectModal from '../ProjectModal/ProjectModal';
+import useAuth from '../hooks/useAuth';
 
 const TabItem = ({ project }) => {
 
     const { category, name, image } = project;
+    const { themeBlack } = useAuth();
 
     const [showModal, setShowModal] = useState(false);
 
@@ -26,7 +28,7 @@ const TabItem = ({ project }) => {
                     </div>
                 </div>
             </div>
-            <div className=''>
+            <div className={themeBlack == true ? "text-black" : ""}>
                 <ProjectModal project={project} showModal={showModal} setShowModal={setShowModal}></ProjectModal>
             </div>
         </div>

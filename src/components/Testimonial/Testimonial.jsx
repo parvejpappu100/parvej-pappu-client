@@ -10,10 +10,12 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
 import SectionTitle from '../SectionTitle/SectionTitle';
+import useAuth from '../hooks/useAuth';
 
 const Testimonial = () => {
 
     const [testimonials, setTestimonials] = useState([]);
+    const { themeBlack } = useAuth();
 
     useEffect(() => {
         fetch("testimonial.json")
@@ -23,7 +25,7 @@ const Testimonial = () => {
 
 
     return (
-        <div className='bg-[#F9FAFB] my-32'>
+        <div className={themeBlack == true ? "bg-[#0F172A] text-[#94A3B8] duration-700" : "bg-[#F9FAFB] duration-700"}>
             <div className='px-4 max-w-[1120px] mx-auto py-32'>
                 <SectionTitle title={"Testimonial"} subTitle={"Client's Review"}></SectionTitle>
                 <div className='mt-32'>
@@ -54,7 +56,7 @@ const Testimonial = () => {
                     >
 
                         {testimonials.map(testimonial => <SwiperSlide className='pb-8 cursor-ew-resize' key={testimonial._id}>
-                            <div className='p-6 bg-white h-[250px] shadow'>
+                            <div className={themeBlack == true ? "p-6 bg-[#1E293B] h-[250px] shadow duration-700" : "p-6 bg-white h-[250px] shadow duration-700"}>
 
                                 <div className=''>
                                     <Rating

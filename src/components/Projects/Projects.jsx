@@ -21,7 +21,6 @@ const Projects = () => {
     const react = projects.filter(project => project.category === "REACT");
     const html = projects.filter(project => project.category === "HTML/CSS");
 
-    const [activeTab, setActiveTab] = useState(0);
 
     return (
         <div className={themeBlack == true ? "bg-[#1E293B] text-[#94A3B8] duration-700" : "bg-white duration-700 text-black"}>
@@ -39,7 +38,7 @@ const Projects = () => {
                         </TabList>
 
                         <TabPanel>
-                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 '>
                                 {
                                     projects.map(project => <TabItem
                                         key={project._id}
@@ -49,7 +48,7 @@ const Projects = () => {
                             </div>
                         </TabPanel>
                         <TabPanel>
-                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                                 {
                                     mern.map(project => <TabItem
                                         key={project._id}
@@ -59,7 +58,7 @@ const Projects = () => {
                             </div>
                         </TabPanel>
                         <TabPanel>
-                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                                 {
                                     react.map(project => <TabItem
                                         key={project._id}
@@ -69,7 +68,7 @@ const Projects = () => {
                             </div>
                         </TabPanel>
                         <TabPanel>
-                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                                 {
                                     html.map(project => <TabItem
                                         key={project._id}
