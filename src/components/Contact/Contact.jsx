@@ -1,10 +1,41 @@
 import React, { useState } from 'react';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import { FaEnvelope, FaFacebookF, FaGithub, FaInstagramSquare, FaLinkedinIn, FaPhoneAlt } from 'react-icons/fa';
+import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
 
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [sending, setSending] = useState(false);
+
+    const onSubmit = async (data) => {
+        setSending(true);
+        try {
+            await fetch('http://localhost:5000/send-email', {
+                method: 'POST',
+                headers: {
+                    "content-type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+            reset();
+            setSending(false);
+            Swal.fire(
+                'Thank You!',
+                'I will response your message as soon as possible!',
+                'success'
+            )
+        } catch (error) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                footer: error.message
+            })
+            setSending(false)
+        }
+    }
 
     return (
         <div className='max-w-[1120px] mx-auto my-32'>
@@ -46,19 +77,19 @@ const Contact = () => {
                     </div>
                     <div className='w-full bg-[#F9FAFB] p-8 rounded-lg'>
                         <h3 className='text-2xl font-semibold uppercase'>Send Me a Message</h3>
-                        <form className='mt-4'>
+                        <form onSubmit={handleSubmit(onSubmit)} className='mt-4'>
                             <div className='flex flex-col md:flex-row gap-5'>
                                 <div className='w-full'>
-                                    <input className='bg-white w-full py-4  px-3  border' placeholder='Name' type="text" />
-                                    {/* {errors.name && <span className='text-red-600'>Name is required</span>} */}
+                                    <input {...register("name", { required: true })} className='bg-white w-full py-4  px-3  border' placeholder='Name' type="text" />
+                                    {errors.name && <span className='text-red-600'>Name is required</span>}
                                 </div>
                                 <div className='w-full'>
-                                    <input className='bg-white w-full py-4 px-3  border' placeholder='Email' type="email" name="email" id="" />
-                                    {/* {errors.email && <span className='text-red-600'>Email is required</span>} */}
+                                    <input {...register("email", { required: true })} className='bg-white w-full py-4 px-3  border' placeholder='Email' type="email" name="email" id="" />
+                                    {errors.email && <span className='text-red-600'>Email is required</span>}
                                 </div>
                             </div>
-                            <textarea className='bg-white w-full mt-5 p-5  border text-xl' name="message" placeholder='Tell me more about your needs...' id="" cols="30" rows="5"></textarea>
-                            {/* {errors.message && <span className='text-red-600'>Please write something</span>} */}
+                            <textarea {...register("message", { required: true })} className='bg-white w-full mt-5 p-5  border text-xl' name="message" placeholder='Tell me more about your needs...' id="" cols="30" rows="5"></textarea>
+                            {errors.message && <span className='text-red-600'>Please write something</span>}
                             <div className='flex justify-center'>
                                 <input disabled={sending} className='btn bg-[#F59E0B] text-white normal-case text-base px-6 rounded-md hover:bg-[#D97706]  duration-1000 border-none font-bold mt-5' type="submit" value={sending ? "Sending..." : "Send Message"} />
                             </div>
