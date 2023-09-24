@@ -23,7 +23,7 @@ const Projects = () => {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <div className='max-w-[1120px] mx-auto my-32'>
+        <div className='max-w-[1120px] mx-auto my-32 border'>
             <SectionTitle title={"Portfolio"} subTitle={"My Work & Projects"}></SectionTitle>
             <div className='mt-20 px-4'>
                 <Tabs selectedIndex={activeTab} onSelect={index => setActiveTab(index)}>
