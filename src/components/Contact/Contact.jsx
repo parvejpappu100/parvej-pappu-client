@@ -73,7 +73,7 @@ const Contact = () => {
                                         <a href="https://www.linkedin.com/in/parvej-hasan-pappu-569730278/" target='_blank'><FaLinkedinIn></FaLinkedinIn></a>
                                     </div>
                                     <div className='tooltip bg-[#F59E0B] text-white rounded-full w-8 h-8 p-[5px] cursor-pointer hover:bg-[#D97706] duration-700' data-tip="Instagram">
-                                        <a href="https://www.instagram.com/parvejhasanpappu100/" target='_blank'><FaInstagramSquare></FaInstagramSquare></a>
+                                        <a href="https://www.instagram.com/parvej_pappu_404/" target='_blank'><FaInstagramSquare></FaInstagramSquare></a>
                                     </div>
                                 </div>
                             </div>

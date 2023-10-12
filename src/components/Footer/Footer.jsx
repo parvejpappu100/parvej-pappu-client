@@ -30,7 +30,7 @@ const Footer = () => {
                             <a href="https://www.linkedin.com/in/parvej-hasan-pappu-569730278/" target='_blank'><FaLinkedinIn></FaLinkedinIn></a>
                         </div>
                         <div className=' bg-[#192132] text-white p-1 rounded-md  hover:bg-[#F59E0B] shadow-md duration-1000'>
-                            <a href="https://www.instagram.com/parvejhasanpappu100/" target='_blank'><FaInstagramSquare></FaInstagramSquare></a>
+                            <a href="https://www.instagram.com/parvej_pappu_404/" target='_blank'><FaInstagramSquare></FaInstagramSquare></a>
                         </div>
                     </div>
                 </nav>
