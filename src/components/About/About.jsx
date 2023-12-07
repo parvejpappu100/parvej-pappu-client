@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import aboutPhoto from "../../assets/images/aboutPhoto.jpg";
+import myPic from "../../assets/images/parvej-hasan-pappu.png";
 import { Link } from 'react-scroll';
 import { FaRegCalendarCheck, FaRegCheckSquare, FaRegClock } from 'react-icons/fa';
 import useAuth from '../hooks/useAuth';
@@ -15,7 +16,7 @@ const About = () => {
                 <SectionTitle title={"About Me"} subTitle={"Know me more"}></SectionTitle>
                 <div className='flex flex-col lg:flex-row gap-12 items-center mt-32'>
                     <div className='lg:w-3/4'>
-                        <img className='rounded-full border border-[#E5E7EB] ps-3 pt-3' src={aboutPhoto} alt="" />
+                        <img className='rounded-full border bg-[#FEB640]  border-[#E5E7EB] ps-3 pt-3' src={myPic} alt="" />
                     </div>
                     <div className='w-full'>
                         <div className='flex  gap-3 items-center'>

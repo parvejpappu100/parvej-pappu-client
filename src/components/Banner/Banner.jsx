@@ -2,6 +2,7 @@ import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { FaDownload } from "react-icons/fa";
 import myPhoto from "../../assets/images/myPhoto.png";
+import bannerImage from "../../assets/images/pappu.png";
 import ResumePDF from "../../assets/resume/Resume of Parvej Hasan.pdf";
 import { Link } from 'react-scroll';
 import useAuth from '../hooks/useAuth';
@@ -67,7 +68,7 @@ const Banner = () => {
                         </div>
                     </div>
                     <div className='w-full pt-4 mb-10 lg:mb-0 '>
-                        <img src={myPhoto} alt="" />
+                        <img src={bannerImage} alt="" />
                     </div>
                 </div>
                 <div className=' fixed right-0 top-1/3 z-20  tooltip tooltip-left tooltip-warning' data-tip="Change Theme">
